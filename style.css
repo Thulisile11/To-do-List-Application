@@ -1,0 +1,124 @@
+
+/* The following includes the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* The following removes margins and paddings from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* The following styles the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* the following makes the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*The following sets all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* The following adds a darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When a list item is clicked on, a background color is added and text is striked out */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a checked mark when a list item is clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* The following styles the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* The following styles the header */
+.header {
+  background-image: url("note.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: grey;
+  padding: 30px 40px;
+  color: #4D4B4D;
+  text-align: center;
+}
+
+/* The following clears floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The following styles the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 90%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* The following styles the Add and logout button */
+.addBtn {
+  padding: 5px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  
+} 
